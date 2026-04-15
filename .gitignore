@@ -1,0 +1,176 @@
+# ==================== Python ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ==================== 数据库 ====================
+# SQLite 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+risk_stocks.db
+risk_stocks.db-journal
+
+# ==================== 日志 ====================
+# 日志文件和目录
+logs/
+*.log
+log/
+
+# ==================== 敏感配置 ====================
+# 本地配置文件（可能包含 token、路径等）
+config/*.local.json
+config/*.local.yaml
+config/*.local.yml
+*.local.json
+*.local.yaml
+*.local.yml
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 凭证文件
+*.pem
+*.key
+*.crt
+credentials.json
+credentials.yaml
+secrets.json
+
+# ==================== 输出数据 ====================
+# 爬取结果（包含大量数据，不建议上传）
+output/
+data/
+keyword_search_*.json
+keyword_search_*.json.gz
+keyword_result_*.json
+keyword_result_*.json.gz
+unmapped_news_*.json
+unmapped_news_*.json.gz
+verified_*.json
+crawl_*.json
+multi_*.json
+
+# 风险报告（历史数据）
+risk_report_*.json
+risk_report_*.md
+
+# 进度文件
+fetch_progress.json
+sample_risk_data.json
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+
+# ==================== 系统文件 ====================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ==================== IDE ====================
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+.settings.json
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ==================== OpenClaw 特定 ====================
+# OpenClaw 运行时文件
+openclaw.log
+openclaw.pid
+.browser/
+browser/
+
+# ==================== 测试数据 ====================
+# 测试输出（可选，如果测试数据重要可以保留）
+test_output/
+test_*.json
+test_*.log
+
+# ==================== 文档生成 ====================
+# 如果生成文档
+docs/_build/
+site/
+*.md~

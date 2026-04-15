@@ -1,0 +1,33 @@
+# HK Risk News Monitor - Python Dependencies
+# ===========================================
+
+# 核心依赖（Python 内置，无需安装）
+# sqlite3 - 数据库
+# logging - 日志
+# pathlib - 路径处理
+# json - JSON 处理
+# re - 正则表达式
+# datetime - 日期时间
+# os - 系统操作
+
+# 可选依赖（根据需要使用）
+# requests - HTTP 请求（如果需要调用 API）
+requests>=2.28.0
+
+# python-dotenv - 加载 .env 文件
+python-dotenv>=1.0.0
+
+# 开发依赖（可选）
+# pytest - 测试
+# pytest>=7.0.0
+
+# black - 代码格式化
+# black>=23.0.0
+
+# flake8 - 代码检查
+# flake8>=6.0.0
+
+# 注意：
+# 1. 本项目主要依赖 Python 标准库
+# 2. 浏览器自动化需要 OpenClaw 框架或类似的 CDP 工具
+# 3. 定时任务可以使用系统 crontab 或 OpenClaw Cron
