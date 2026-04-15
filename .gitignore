@@ -99,8 +99,10 @@ secrets.json
 
 # ==================== 输出数据 ====================
 # 爬取结果（包含大量数据，不建议上传）
-output/
-data/
+output/*.json
+output/*.csv
+data/*.json
+data/*.csv
 keyword_search_*.json
 keyword_search_*.json.gz
 keyword_result_*.json
@@ -118,6 +120,13 @@ risk_report_*.md
 # 进度文件
 fetch_progress.json
 sample_risk_data.json
+
+# 空目录占位符
+!output/.gitkeep
+!data/.gitkeep
+!logs/.gitkeep
+!examples/.gitkeep
+!tests/.gitkeep
 
 # 临时文件
 *.tmp
