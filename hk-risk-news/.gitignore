@@ -103,30 +103,11 @@ output/*.json
 output/*.csv
 data/*.json
 data/*.csv
-keyword_search_*.json
-keyword_search_*.json.gz
-keyword_result_*.json
-keyword_result_*.json.gz
-unmapped_news_*.json
-unmapped_news_*.json.gz
-verified_*.json
-crawl_*.json
-multi_*.json
-
-# 风险报告（历史数据）
-risk_report_*.json
-risk_report_*.md
-
-# 进度文件
-fetch_progress.json
-sample_risk_data.json
 
 # 空目录占位符
 !output/.gitkeep
 !data/.gitkeep
 !logs/.gitkeep
-!examples/.gitkeep
-!tests/.gitkeep
 
 # 临时文件
 *.tmp
