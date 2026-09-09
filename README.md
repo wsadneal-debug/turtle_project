@@ -1,171 +1,102 @@
-# Turtle Project - 龟龟项目
+# Turtle Project · 龟龟项目
 
-🐢 **智能投资决策系统**
+面向 A 股与港股研究的企业分析方法、风险新闻工具和项目架构文档。
 
----
+当前公开内容包括 **企业质量分析 Skill 0.4.0（中文 / English）**、风险新闻工具源码，以及数据同步、计算、评分、扫描和回测等模块的设计说明。仓库并未包含架构文档所描述的全部运行系统；各部分的使用方式与完成状态见下文。
 
-## 企业质量分析 Skill 0.4.0
+## 从这里开始
 
-独立企业分析方法包，提供中文和英文两个完整版本，选择一种安装。包含五年与最新单季分析、事件营收推演、集团缩放、现金与分红验证，以及穿透回报率和绝对现金回本检验。
+| 你想做什么 | 入口 |
+|---|---|
+| 使用中文 Skill 分析企业 | [中文说明](skill/README.md) · [中文 ZIP](skill/enterprise-analysis-skill-v0.4.0-zh-CN.zip) |
+| Use the English analysis Skill | [English guide](skill/translations/en/README.md) · [English ZIP](skill/enterprise-analysis-skill-v0.4.0-en.zip) |
+| 查看分析方法本体 | [中文入口](skill/skills/enterprise-quality-analysis/SKILL.md) · [English entry](skill/translations/en/skills/enterprise-quality-analysis/SKILL.md) |
+| 了解风险新闻工具 | [模块说明](hk-risk-news/README.md) · [核心源码](hk-risk-news/core/) |
+| 阅读整体架构和模块设计 | [文档索引](prompts/README.md) · [总架构](prompts/ARCHITECTURE_PROMPT.md) |
 
-- 中文：[使用说明](skill/README.md) · [下载 ZIP](skill/enterprise-analysis-skill-v0.4.0-zh-CN.zip)
-- English: [Guide](skill/translations/en/README.md) · [Download ZIP](skill/enterprise-analysis-skill-v0.4.0-en.zip)
+## 企业质量分析 Skill
 
-解压后安装完整的 `skills/enterprise-quality-analysis` 目录。安装包仅含方法文档和合成算例，不包含真实研究数据或凭据；适用边界及许可说明见各语言包 README。
+Skill 的判断顺序是：先研究企业基本面及稳定分红的支撑，再分别检验穿透回报率与绝对估值。三个条件同时成立，才构成该方法内的策略机会；低价不能补偿实质经营衰退。
 
----
+分析沿以下链条展开：
 
-## 📁 项目结构
+1. 理解盈利基础、行业周期、壁垒和竞争地位。
+2. 检查五年经营与每股趋势，以及最新单季变化和季节性。
+3. 推演重大事件对未来业务量价、营收或成本、资本的影响。
+4. 缩放到集团，追踪经常利润、每股现金与分红能力。
+5. 验证现金质量、财务韧性、资本配置和治理。
+6. 结合历史、反证和保守情景，判断基本面及分红是否可持续。
+7. 在一致假设下检验穿透回报率与六年现金回本。
+8. 分别报告企业前提、两项价格条件和综合结论；行情位置仅作为可选时机观察。
 
-```
+### 安装与使用
+
+下载所需语言的 ZIP 并解压，将其中完整的 `skills/enterprise-quality-analysis` 目录安装或加载到支持该格式的宿主。不要只复制 `SKILL.md`：参考文档是方法的一部分。
+
+中文和英文是同一 Skill 的两个完整语言版本，名称相同，**只安装其中一种**。输出语言优先服从用户要求。无安装能力时，也可将入口及所需参考作为任务材料提供给助手。
+
+示例请求：
+
+> 使用此 Skill 分析指定企业，检查五年和最新单季，推演重大事件并缩放到集团，验证每股现金与稳定分红，再分别判断穿透回报率和绝对估值。注明来源、研究截止日及资料缺口。
+
+只研究附件时可明确“不联网”；只看企业质量时可明确“不评价格”。Skill 不自带数据、联网权限、模型额度或交易能力，行情工具以宿主实际提供和授权的能力为准。
+
+### 版本与验证
+
+当前方法版本为 **0.4.0（2026-09-09）**，更新内容见[中文变更记录](skill/CHANGELOG.md)或 [English changelog](skill/translations/en/CHANGELOG.md)。
+
+每个语言包包含 16 个文件：包级说明、版本和忽略规则、Skill 入口、可选界面元数据及 10 份参考。发布前已核对双语源码、包内引用、公式块和 ZIP 内容，并运行原维护环境的离线检查：**67 项通过**。维护测试和旧版比较包未随本次公开交付上传；这些结果不等于真实模型效果、行情服务联调或跨宿主安装验收。
+
+本次新增方法文件和 ZIP 已完成脱密审查，仅包含方法与明确标注的合成算例。此项审查不覆盖仓库全部历史提交。
+
+## 风险新闻工具
+
+[hk-risk-news/](hk-risk-news/) 保留了关键词搜索辅助、新闻解析、股票名称映射、去重入库、数据库管理和调度脚本，另有部署记录及历史实现。
+
+这是需要适配环境的工具源码。部分脚本仍采用固定工作目录，并依赖外部浏览器能力、股票别名数据和本地数据库；提供 `.env.example` 不代表所有入口已读取该配置。旧说明中的覆盖数量与运行记录不代表新环境已经具备相同数据或完成部署。
+
+建议先阅读[模块说明](hk-risk-news/README.md)、[部署说明](hk-risk-news/docs/DEPLOYMENT.md)及对应源码，再配置独立研究环境。部分初始化路径包含重建表逻辑，运行前应核对目标数据库。克隆仓库不会自动安装定时任务，本次文档更新也未执行新闻采集或验证其在线数据源。
+
+## 架构与模块文档
+
+[prompts/](prompts/) 描述更广的股票研究框架：数据同步、统一计算、评分、每日扫描、发布、回测和模拟组合。其中的模块名与流程用于说明设计，不意味着对应完整代码已在本仓库公开。
+
+主要原则是原始数据同步、统一计算落库、消费端读取统一结果，各模块保持明确职责。阅读时先看[总架构](prompts/ARCHITECTURE_PROMPT.md)，再按[索引](prompts/README.md)选择模块文档。独立企业分析 Skill 的现行方法以其自身入口及参考为准。
+
+## 仓库结构
+
+```text
 turtle_project/
-├── prompts/                 # 【最高优先级】项目提示词配置
-│   ├── README.md            # 提示词使用说明
-│   ├── ARCHITECTURE_PROMPT.md
-│   ├── A_STOCK_DATA_PROMPT.md
-│   ├── B_COMPUTE_PROMPT.md
-│   ├── B_SCORING_PROMPT.md
-│   ├── C_DAILY_SCAN_PROMPT.md
-│   ├── D_SCAN_PUBLISH_PROMPT.md
-│   ├── E_DAILY_PIPELINE_PROMPT.md
-│   ├── F_BACKTEST_PROMPT.md
-│   └── G_SIMULATED_PORTFOLIO_PROMPT.md
-│
-├── hk-risk-news/            # 港股风险新闻监控系统
-│   ├── core/                # 核心代码
-│   ├── scripts/             # 辅助脚本
-│   ├── docs/                # 项目文档
-│   ├── legacy/              # 历史代码
-│   └── README.md            # 子系统说明
-│
-├── data/                    # 数据目录
-├── logs/                    # 日志目录
-└── output/                  # 输出目录
+├── README.md                # 总说明与使用入口
+├── README_ROOT.md           # 兼容旧链接的索引
+├── skill/                   # 中文方法源码及双语 ZIP
+│   ├── skills/enterprise-quality-analysis/
+│   └── translations/en/     # 英文完整源码
+├── hk-risk-news/
+│   ├── core/                # 新闻处理、映射、数据库和调度
+│   ├── scripts/             # 批处理与调度安装脚本
+│   ├── docs/                # 模块说明和历史部署记录
+│   ├── examples/            # 配置示例
+│   └── legacy/              # 历史实现
+├── prompts/                 # 架构和模块设计说明
+├── data/                    # 占位目录
+├── logs/                    # 占位目录
+└── output/                  # 占位目录
 ```
 
----
-
-## 🔮 Prompts - 项目提示词配置
-
-**优先级：最高** ⭐⭐⭐⭐⭐
-
-`prompts/` 目录包含整个项目的核心提示词配置，指导 AI 助手如何理解和执行项目任务。
-
-### 提示词列表
-
-| 文件 | 用途 |
-|------|------|
-| `README.md` | 提示词文档说明 |
-| `ARCHITECTURE_PROMPT.md` | 项目架构提示词 |
-| `A_STOCK_DATA_PROMPT.md` | A 股数据提示词 |
-| `B_COMPUTE_PROMPT.md` | 计算提示词 |
-| `B_SCORING_PROMPT.md` | 评分提示词 |
-| `C_DAILY_SCAN_PROMPT.md` | 每日扫描提示词 |
-| `D_SCAN_PUBLISH_PROMPT.md` | 扫描发布提示词 |
-| `E_DAILY_PIPELINE_PROMPT.md` | 每日流水线提示词 |
-| `F_BACKTEST_PROMPT.md` | 回测提示词 |
-| `G_SIMULATED_PORTFOLIO_PROMPT.md` | 模拟组合提示词 |
-
-### 使用说明
-
-1. **AI 助手启动时首先读取** `prompts/README.md`
-2. 根据任务类型加载对应的提示词文件
-3. 遵循提示词中的指导和规范执行任务
-
----
-
-## 📰 子系统
-
-### 1. 港股风险新闻监控系统 (hk-risk-news/)
-
-🔴 **自动监控 A/H 股市场风险新闻，智能识别风险股票**
-
-**功能**:
-- 20 个风险关键词搜索
-- 多搜索源支持（东方财富网、第一财经）
-- A+H 股市场覆盖（7876 条股票别名）
-- 智能股票映射
-- 自动去重入库
-- 定时自动执行（每天 18:00）
-
-**文档**: [hk-risk-news/README.md](hk-risk-news/README.md)
-
----
-
-## 🚀 快速开始
-
-### 1. 克隆仓库
+### 获取当前 Skill 分支
 
 ```bash
-git clone git@github.com-myrepo:wsadneal-debug/turtle_project.git
+git clone --branch codex/enterprise-analysis-skill-v0.4.0 https://github.com/wsadneal-debug/turtle_project.git
 cd turtle_project
 ```
 
-### 2. 阅读提示词文档
+上述分支包含 0.4.0 双语 Skill 和本说明。只使用 Skill 时，直接下载上方对应语言的 ZIP 即可，无需安装新闻工具的 Python 依赖。
 
-```bash
-cat prompts/README.md
-```
+## 维护与许可说明
 
-### 3. 进入子系统
+提交修改时请注明影响的模块、方法版本和实际验证结果。双语方法修改应同步核对公式与引用；研究输入、输出、账户凭据及运行数据库应保留在发布包之外。
 
-```bash
-# 港股风险新闻监控系统
-cd hk-risk-news
-cat README.md
-```
+旧版仓库说明标注 MIT，但当前文件树未提供对应的 `LICENSE` 正文；Skill 包也保留了许可由所有者决定的说明。本次更新不新增或变更许可授权，具体授权范围仍需由所有者明确。
 
----
-
-## 📋 目录说明
-
-| 目录 | 用途 | 权限 |
-|------|------|------|
-| `prompts/` | 项目提示词配置 | 🔒 只读，核心配置 |
-| `hk-risk-news/` | 港股风险新闻系统 | ✅ 可修改 |
-| `data/` | 数据文件 | 📝 运行时生成 |
-| `logs/` | 日志文件 | 📝 运行时生成 |
-| `output/` | 输出文件 | 📝 运行时生成 |
-
----
-
-## 🔐 提示词优先级
-
-```
-最高优先级 → prompts/
-            ↓
-        指导整个项目
-            ↓
-    各子系统遵循提示词规范
-```
-
-**重要**: 
-- `prompts/` 目录下的文件是项目的核心配置
-- 所有 AI 助手必须首先读取并遵循这些提示词
-- 修改提示词需要谨慎，影响整个项目行为
-
----
-
-## 📖 详细文档
-
-- **项目提示词**: [prompts/README.md](prompts/README.md)
-- **港股风险新闻系统**: [hk-risk-news/README.md](hk-risk-news/README.md)
-- **部署指南**: [hk-risk-news/docs/DEPLOYMENT_CHECKLIST.md](hk-risk-news/docs/DEPLOYMENT_CHECKLIST.md)
-
----
-
-## 🤝 贡献指南
-
-1. **修改提示词**: 需谨慎，影响整个项目
-2. **添加子系统**: 在根目录创建新目录
-3. **遵循规范**: 遵循 `prompts/` 中的指导
-
----
-
-## 📄 许可证
-
-MIT License
-
----
-
-*最后更新：2026-04-15*
+文档更新日期：2026-09-09。
