@@ -4,6 +4,17 @@
 
 ---
 
+## 企业质量分析 Skill 0.4.0
+
+独立企业分析方法包，提供中文和英文两个完整版本，选择一种安装。包含五年与最新单季分析、事件营收推演、集团缩放、现金与分红验证，以及穿透回报率和绝对现金回本检验。
+
+- 中文：[使用说明](skill/README.md) · [下载 ZIP](skill/enterprise-analysis-skill-v0.4.0-zh-CN.zip)
+- English: [Guide](skill/translations/en/README.md) · [Download ZIP](skill/enterprise-analysis-skill-v0.4.0-en.zip)
+
+解压后安装完整的 `skills/enterprise-quality-analysis` 目录。安装包仅含方法文档和合成算例，不包含真实研究数据或凭据；适用边界及许可说明见各语言包 README。
+
+---
+
 ## 📁 项目结构
 
 ```

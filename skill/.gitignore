@@ -1,0 +1,24 @@
+# Research artifacts belong outside the distributable skill repository.
+.env
+.env.*
+*.key
+*.pem
+*.db
+*.sqlite*
+*.log
+*.pdf
+*.csv
+*.xlsx
+*.docx
+*.zip
+.DS_Store
+__pycache__/
+inputs/
+outputs/
+data/
+cache/
+private/
+
+_local_review/
+research/
+*.pyc
