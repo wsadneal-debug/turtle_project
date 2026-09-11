@@ -1,4 +1,0 @@
-interface:
-  display_name: "Enterprise Quality Analysis"
-  short_description: "Business and dividends first, then return and valuation"
-  default_prompt: "Use $enterprise-quality-analysis to examine five-year/latest-quarter trends, event revenue projections and group scaling, verify per-share cash and sustainable dividends, then assess both price conditions."

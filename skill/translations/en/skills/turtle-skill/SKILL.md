@@ -1,11 +1,11 @@
 ---
-name: enterprise-quality-analysis
+name: turtle-skill
 description: Research company fundamentals, annual/interim reports and shareholder returns. Examine five-year and latest-quarter trends, project material events and group revenue effects, verify per-share cash and sustainable dividends, then assess look-through return and absolute cash payback; optionally examine historical prices. Works with public evidence, attachments or bounded offline research; never executes trades.
 metadata:
   version: "0.4.0"
   language: en
 ---
-# Enterprise Quality Analysis
+# turtle skill
 
 **Qualify the business before testing both prices: stable fundamentals without substantive deterioration and funded sustainable dividends, adequate look-through return, and clearly low absolute valuation must all hold for an opportunity within this strategy.** Cheapness cannot offset decline, nor a high dividend offset unsustainable distributions; stability does not require growth every quarter, and normal seasonality or a sound asset exit is not automatically decline.
 

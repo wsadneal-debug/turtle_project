@@ -2,19 +2,19 @@
 
 面向 A 股与港股研究的企业分析方法、风险新闻工具和项目架构文档。
 
-当前公开内容包括 **企业质量分析 Skill 0.4.0（中文 / English）**、风险新闻工具源码，以及数据同步、计算、评分、扫描和回测等模块的设计说明。仓库并未包含架构文档所描述的全部运行系统；各部分的使用方式与完成状态见下文。
+当前公开内容包括 **龟龟skill 0.4.0（中文 / English）**、风险新闻工具源码，以及数据同步、计算、评分、扫描和回测等模块的设计说明。仓库并未包含架构文档所描述的全部运行系统；各部分的使用方式与完成状态见下文。
 
 ## 从这里开始
 
 | 你想做什么 | 入口 |
 |---|---|
-| 使用中文 Skill 分析企业 | [中文说明](skill/README.md) · [中文 ZIP](skill/enterprise-analysis-skill-v0.4.0-zh-CN.zip) |
-| Use the English analysis Skill | [English guide](skill/translations/en/README.md) · [English ZIP](skill/enterprise-analysis-skill-v0.4.0-en.zip) |
-| 查看分析方法本体 | [中文入口](skill/skills/enterprise-quality-analysis/SKILL.md) · [English entry](skill/translations/en/skills/enterprise-quality-analysis/SKILL.md) |
+| 使用中文 Skill 分析企业 | [中文说明](skill/README.md) · [中文 ZIP](skill/turtle-skill-v0.4.0-zh-CN.zip) |
+| Use the English analysis Skill | [English guide](skill/translations/en/README.md) · [English ZIP](skill/turtle-skill-v0.4.0-en.zip) |
+| 查看分析方法本体 | [中文入口](skill/skills/turtle-skill/SKILL.md) · [English entry](skill/translations/en/skills/turtle-skill/SKILL.md) |
 | 了解风险新闻工具 | [模块说明](hk-risk-news/README.md) · [核心源码](hk-risk-news/core/) |
 | 阅读整体架构和模块设计 | [文档索引](prompts/README.md) · [总架构](prompts/ARCHITECTURE_PROMPT.md) |
 
-## 企业质量分析 Skill
+## 龟龟skill
 
 Skill 的判断顺序是：先研究企业基本面及稳定分红的支撑，再分别检验穿透回报率与绝对估值。三个条件同时成立，才构成该方法内的策略机会；低价不能补偿实质经营衰退。
 
@@ -31,7 +31,7 @@ Skill 的判断顺序是：先研究企业基本面及稳定分红的支撑，�
 
 ### 安装与使用
 
-下载所需语言的 ZIP 并解压，将其中完整的 `skills/enterprise-quality-analysis` 目录安装或加载到支持该格式的宿主。不要只复制 `SKILL.md`：参考文档是方法的一部分。
+下载所需语言的 ZIP 并解压，将其中完整的 `skills/turtle-skill` 目录安装或加载到支持该格式的宿主。不要只复制 `SKILL.md`：参考文档是方法的一部分。
 
 中文和英文是同一 Skill 的两个完整语言版本，名称相同，**只安装其中一种**。输出语言优先服从用户要求。无安装能力时，也可将入口及所需参考作为任务材料提供给助手。
 
@@ -70,7 +70,7 @@ turtle_project/
 ├── README.md                # 总说明与使用入口
 ├── README_ROOT.md           # 兼容旧链接的索引
 ├── skill/                   # 中文方法源码及双语 ZIP
-│   ├── skills/enterprise-quality-analysis/
+│   ├── skills/turtle-skill/
 │   └── translations/en/     # 英文完整源码
 ├── hk-risk-news/
 │   ├── core/                # 新闻处理、映射、数据库和调度
@@ -87,7 +87,7 @@ turtle_project/
 ### 获取当前 Skill 分支
 
 ```bash
-git clone --branch codex/enterprise-analysis-skill-v0.4.0 https://github.com/wsadneal-debug/turtle_project.git
+git clone --branch 龟龟skill https://github.com/wsadneal-debug/turtle_project.git
 cd turtle_project
 ```
 

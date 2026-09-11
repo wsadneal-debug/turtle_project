@@ -1,4 +1,0 @@
-interface:
-  display_name: "企业质量分析"
-  short_description: "先判断基本面与分红，再检验回报和估值"
-  default_prompt: "使用 $enterprise-quality-analysis，按五年与最新单季、事件营收推演和集团缩放研究企业，核实每股现金与稳定分红，再评估两项价格条件。"
