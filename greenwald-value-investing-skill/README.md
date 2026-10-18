@@ -1,10 +1,20 @@
-# Three-step value research
+# Greenwald Value Investing Skill
 
 [简体中文](README.zh-CN.md)
 
-A portable AI skill for manually researching a few nonfinancial businesses using asset reproduction value, earnings power value (EPV), and growth returns at a specified price. The host AI obtains available data, reads official reports, develops estimates, and reviews the reasoning. Bundled Python performs the same deterministic calculations in both editions, using only the standard library.
+A portable AI skill for manually researching a few mainland China A-share or Hong Kong-listed nonfinancial businesses using asset reproduction value, earnings power value (EPV), and growth returns at a specified price. The host AI obtains available data, reads official reports, develops estimates, and reviews the reasoning. Bundled Python performs the same deterministic calculations in both editions, using only the standard library.
+
+- **Asset reproduction value:** estimate the current economic cost of reproducing equivalent existing operating resources, add nonoperating resources, and deduct obligations and other equity claims to arrive at parent-common value.
+- **EPV:** estimate normal distributable earnings at current operating scale without relying on growth, then value those earnings with maintenance, tax, capital cost, and an explicit parent-common equity bridge.
+- **Growth returns:** first assess sustainable competitive advantage and the scope of protected growth. Where applicable, estimate conditional returns at the specified purchase price from distributions, organic growth, and the investment of remaining funds, with economic decay considered. The method may also conclude skip or defer.
 
 The methods are independent. Do not add asset value and EPV, or convert growth returns into a third value total. Reasonable estimates are welcome when identified as estimates. Missing small items do not automatically block a useful base estimate. Completed calculations are not a purchase decision or a guaranteed price floor.
+
+## Get the complete skill
+
+The source files are publicly available on the [格林沃尔特-价值投资-skill branch](https://github.com/wsadneal-debug/turtle_project/tree/%E6%A0%BC%E6%9E%97%E6%B2%83%E5%B0%94%E7%89%B9-%E4%BB%B7%E5%80%BC%E6%8A%95%E8%B5%84-skill/greenwald-value-investing-skill).
+
+Open that branch on GitHub, choose **Code → Download ZIP**, and extract the download. Enter `greenwald-value-investing-skill/` inside the extracted repository. This folder contains the bilingual instructions and the two complete skill directories under `skills/`. Do not install the whole repository as a skill; select one complete language directory below. The download also contains the repository's existing unrelated files.
 
 ## Choose and install an edition
 
@@ -34,7 +44,7 @@ The host adapts sources into an internal JSON packet; users do not need a databa
 
 ## Offline synthetic demonstration
 
-Run from this repository's root with a fresh output directory. These inputs are invented teaching data, and the tiny material files are not real full reports. This demonstrates execution only, with no model or network calls:
+Run from the downloaded `greenwald-value-investing-skill/` folder with a fresh output directory. These inputs are invented teaching data, and the tiny material files are not real full reports. This demonstrates execution only, with no model or network calls:
 
 ```bash
 skill=skills/three-step-value-en
@@ -52,4 +62,4 @@ Expected teaching results: asset parent-common CNY1.7bn (CNY17/share), EPV paren
 
 ## Publication status
 
-This directory is prepared for a public release. No license has been selected or granted here; choose an appropriate license before describing the project as open source. No hosting repository URL or author identity is assumed. Only skill instructions, synthetic teaching assets, and necessary calculation code are included; private databases, real-company research, credentials, internal logs, and Git history are excluded.
+The source code in this skill directory has been published on the GitHub branch linked above. No open-source license has been selected or granted here, so public source availability should not be described as a licensed open-source release. This directory contains only skill instructions, synthetic teaching assets, and necessary calculation code. Private databases, real-company research, credentials, internal logs, and local development Git history are excluded from this skill publication.

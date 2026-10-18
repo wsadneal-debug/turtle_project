@@ -1,3 +1,11 @@
+# 格林沃尔特-价值投资 Skill
+
+面向少量 A 股、港股非金融企业的中英文 AI 研究技能，分别研究资产再生产价值、正常盈利能力价值（EPV）与给定价格下的成长回报；三个结果独立，不相加。提供完整技能目录、安装说明和离线合成示例，源码已公开，许可证尚未选定。
+
+[中文说明与安装](greenwald-value-investing-skill/README.zh-CN.md) · [English guide](greenwald-value-investing-skill/README.md)
+
+---
+
 # Turtle Project - 龟龟项目
 
 🐢 **智能投资决策系统**
