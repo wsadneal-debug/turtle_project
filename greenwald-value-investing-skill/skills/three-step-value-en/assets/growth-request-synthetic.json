@@ -1,0 +1,13 @@
+{
+  "price": {
+    "mode": "market_cap",
+    "value": 1500000000,
+    "currency": "CNY",
+    "date": "2026-10-17",
+    "sources": [
+      "Synthetic teaching assumption, not an actual quote"
+    ]
+  },
+  "policy": {},
+  "notes": "Demonstrates reuse of the CNY synthetic EPV; not the USD book-example price."
+}

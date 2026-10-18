@@ -1,0 +1,95 @@
+{
+  "method": "growth",
+  "basis_mode": "reuse_epv",
+  "simulation": true,
+  "currency": "CNY",
+  "summary": "Synthetic CNY three-step wiring example reusing bundled EPV; calculates only pre-decay conditional returns without verifying real competitive advantage.",
+  "franchise": {
+    "status": "conditional",
+    "reason": "Assumed local advantage for teaching; no actual company studied"
+  },
+  "distribution": {
+    "mode": "ratio",
+    "value": 0.6,
+    "reason": "Synthetic sustainable distribution ratio, not a company fact"
+  },
+  "organic": {
+    "revenue_growth": 0.03,
+    "earnings_growth": 0.03,
+    "investment": {
+      "mode": "direct",
+      "value": 5000000,
+      "reason": "Synthetic annual incremental investment; maintenance already deducted in EPV"
+    },
+    "reason": "Synthetic protected-market assumption"
+  },
+  "active": {
+    "mode": "direct",
+    "factor": 1.6,
+    "reason": "Synthetic active-investment value/cost assumption, not a default factor"
+  },
+  "decay": {
+    "mode": "qualitative",
+    "reason": "No real advantage-duration data in this synthetic example; conditional return is pre-decay, risks may change the conclusion, and adequate compensation is not proven"
+  },
+  "price": {
+    "mode": "market_cap",
+    "value": 1500000000,
+    "currency": "CNY",
+    "date": "2026-10-17",
+    "sources": [
+      "Synthetic teaching price assumption"
+    ]
+  },
+  "policy": {},
+  "price_grid": [
+    {
+      "name": "Lower-price synthetic comparison",
+      "mode": "market_cap",
+      "value": 1200000000,
+      "currency": "CNY",
+      "sources": [
+        "Synthetic teaching assumption"
+      ]
+    },
+    {
+      "name": "Higher-price synthetic comparison",
+      "mode": "market_cap",
+      "value": 1800000000,
+      "currency": "CNY",
+      "sources": [
+        "Synthetic teaching assumption"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Active factor preserves value",
+      "reason": "Synthetic capital-allocation comparison",
+      "active": {
+        "mode": "direct",
+        "factor": 1
+      }
+    },
+    {
+      "name": "Quantified decay assumption",
+      "reason": "Demonstrates annual deduction only; not observed company decay or a universal threshold",
+      "decay": {
+        "mode": "deduct",
+        "rate": 0.02,
+        "residual_fraction": 0.3
+      }
+    }
+  ],
+  "sources": [
+    "Bundled synthetic EPV and teaching parameters, not current company data"
+  ],
+  "assumptions": [
+    "Entirely synthetic, in CNY base units; frozen EPV E=140m, B=-150m, WACC10%.",
+    "A numerical half-life is optional; base qualitative treatment does not produce quantified net returns."
+  ],
+  "growth_route": {
+    "action": "evaluate",
+    "reason": "Reproduces teaching assumptions only; does not verify a real company moat"
+  }
+}

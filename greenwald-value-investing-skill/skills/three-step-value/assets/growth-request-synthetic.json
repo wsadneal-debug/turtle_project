@@ -1,0 +1,13 @@
+{
+  "price": {
+    "mode": "market_cap",
+    "value": 1500000000,
+    "currency": "CNY",
+    "date": "2026-10-17",
+    "sources": [
+      "合成教学假设，非真实报价"
+    ]
+  },
+  "policy": {},
+  "notes": "仅供复用CNY合成EPV演示，非USD书本算例价格。"
+}

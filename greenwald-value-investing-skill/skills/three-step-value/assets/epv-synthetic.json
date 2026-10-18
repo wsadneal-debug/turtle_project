@@ -1,0 +1,117 @@
+{
+  "method": "epv",
+  "simulation": true,
+  "currency": "CNY",
+  "valuation_date": "2026-06-30",
+  "scope": "parent_common",
+  "shares": 100000000,
+  "premise": "纯合成企业，当前正常经营不增长；不是任何上市企业的估值。",
+  "summary": "合成验证：营业利润2亿元，折旧加回0.3亿元，维护0.4亿元，税0.5亿元，可分配经营盈利1.4亿元。",
+  "earnings": {
+    "revenue": 1000000000,
+    "margin": 0.2,
+    "ebit_adjustments": [],
+    "da_addback": 30000000,
+    "working_capital_addition": 0,
+    "lease": {
+      "mode": "none"
+    },
+    "reason": "全部为教学假设，利润率已含正常费用。"
+  },
+  "maintenance": {
+    "mode": "components",
+    "reason": "按全新功能成本更新，不按当前剩余净值计算。",
+    "items": [
+      {
+        "id": "plant_renewal",
+        "name": "合成设备年度更新",
+        "gross_cost": 400000000,
+        "residual": 0,
+        "life_years": 10,
+        "reason": "教学假设",
+        "sources": [
+          "本文件合成输入"
+        ]
+      }
+    ]
+  },
+  "tax": {
+    "mode": "rate",
+    "rate": 0.25,
+    "adjustments": [],
+    "reason": "无融资税盾的教学税率"
+  },
+  "capital_cost": {
+    "mode": "direct",
+    "currency": "CNY",
+    "wacc": 0.1,
+    "as_of": "2026-06-30",
+    "reason": "纯合成10%，不是市场当前资本成本",
+    "sources": [
+      "教学假设"
+    ]
+  },
+  "equity_adjustments": [
+    {
+      "id": "cash",
+      "name": "超额现金",
+      "kind": "excess_cash",
+      "value": 100000000,
+      "reason": "不在核心盈利计价"
+    },
+    {
+      "id": "debt",
+      "name": "实际融资债务",
+      "kind": "financing_debt",
+      "value": 200000000,
+      "reason": "实际金额完整扣除"
+    },
+    {
+      "id": "nci",
+      "name": "外部股东盈利价值",
+      "kind": "nci",
+      "value": 50000000,
+      "reason": "合成权益，不沿用资产法NCI"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "维护及持续税差联合情景",
+      "reason": "维护增加1000万元、正常税负减少250万元是本情景假设，不是所有资本开支即时抵税。",
+      "maintenance": {
+        "mode": "direct",
+        "value": 50000000
+      },
+      "tax": {
+        "adjustments": [
+          {
+            "id": "renewal_tax",
+            "value": -2500000,
+            "reason": "合成持续税差"
+          }
+        ]
+      }
+    },
+    {
+      "name": "股份奖励全部归属",
+      "shares": 110000000,
+      "reason": "资源不变，只变股数"
+    }
+  ],
+  "sensitivity": {
+    "margins": [
+      0.18,
+      0.2,
+      0.22
+    ],
+    "waccs": [
+      0.08,
+      0.1,
+      0.12
+    ]
+  },
+  "assumptions": [
+    "所有输入均为合成，区间不是置信区间。"
+  ],
+  "distribution": "估算可分配能力，不等于已经收到股息。"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Three-step value research (English)"
+  short_description: "Asset value, EPV, and growth returns from available sources"
+  default_prompt: "Use $three-step-value-en to research my chosen business, discover available data tools and files, run the required Python calculations, and explain the results in English."
+policy:
+  allow_implicit_invocation: true

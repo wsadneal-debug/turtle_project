@@ -1,0 +1,124 @@
+{
+  "method": "asset",
+  "simulation": true,
+  "currency": "CNY",
+  "valuation_date": "2026-06-30",
+  "financial_position_date": "2026-06-30",
+  "shares": 100000000,
+  "premise": "持续经营；全部为合成教学输入，不代表任何公司。",
+  "summary": "合成资产23亿元，义务及外部权益6亿元，归母17亿元，每股17元。",
+  "items": [
+    {
+      "id": "cash",
+      "name": "现金",
+      "kind": "asset",
+      "operating": false,
+      "book_value": 100000000,
+      "value": 100000000,
+      "basis": "book",
+      "reason": "合成事实原额",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "working_assets",
+      "name": "正常流动经营资源",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 500000000,
+      "value": 500000000,
+      "basis": "book",
+      "reason": "合成账面数作估值",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "facilities",
+      "name": "设施经济净再生产价值",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 900000000,
+      "value": 1200000000,
+      "basis": "estimate",
+      "reason": "合成：全新15亿，按剩余服务能力80%计12亿",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "organization",
+      "name": "有效团队与系统",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 0,
+      "value": 300000000,
+      "basis": "estimate",
+      "reason": "合成合并粗估，未与设施或账面商誉重复",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "investment",
+      "name": "非经营投资权益",
+      "kind": "asset",
+      "operating": false,
+      "book_value": 200000000,
+      "value": 200000000,
+      "basis": "book",
+      "reason": "合成持有权益，不穿透重复计价",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "liabilities",
+      "name": "全部经济义务",
+      "kind": "liability",
+      "operating": false,
+      "book_value": 500000000,
+      "value": 500000000,
+      "basis": "book",
+      "reason": "合成全部义务总额，明细不再累加",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    },
+    {
+      "id": "nci",
+      "name": "外部普通权益",
+      "kind": "nci",
+      "operating": false,
+      "book_value": 100000000,
+      "value": 100000000,
+      "basis": "book",
+      "reason": "合成同范围净再生产权益",
+      "sources": [
+        "本文件合成教学输入"
+      ],
+      "include": true
+    }
+  ],
+  "assumptions": [
+    "所有金额均为合成，非财报披露或真实报价。"
+  ],
+  "scenarios": [
+    {
+      "name": "设施成新假设下降",
+      "reason": "合成设施净值少2亿，其他不变",
+      "item_values": {
+        "facilities": 1000000000
+      }
+    }
+  ],
+  "scope": "parent_common",
+  "lease_basis": "none"
+}

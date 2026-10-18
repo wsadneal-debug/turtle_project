@@ -1,0 +1,193 @@
+{
+  "simulation": true,
+  "issuer": {
+    "code": "DEMO.HK",
+    "name": "Synthetic teaching business",
+    "market": "HK"
+  },
+  "as_of": "2026-10-17",
+  "currency": "CNY",
+  "shares": {
+    "value": 100000000,
+    "date": "2026-06-30",
+    "source": "Synthetic teaching assumption"
+  },
+  "snapshots": [
+    {
+      "period_end": "2024-12-31",
+      "report_type": "annual",
+      "currency": "CNY",
+      "scope": "consolidated",
+      "canonical": {
+        "revenue": {
+          "value": 900000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 900000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2024-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "reported_operating_profit": {
+          "value": 180000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 180000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2024-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "cash": {
+          "value": 100000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 100000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2024-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        }
+      },
+      "statements": {
+        "balance": [],
+        "income": [],
+        "cashflow": []
+      },
+      "report_facts": []
+    },
+    {
+      "period_end": "2025-12-31",
+      "report_type": "annual",
+      "currency": "CNY",
+      "scope": "consolidated",
+      "canonical": {
+        "revenue": {
+          "value": 1000000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 1000000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2025-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "reported_operating_profit": {
+          "value": 200000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 200000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2025-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "cash": {
+          "value": 100000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 100000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2025-12-31 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        }
+      },
+      "statements": {
+        "balance": [],
+        "income": [],
+        "cashflow": []
+      },
+      "report_facts": []
+    },
+    {
+      "period_end": "2026-06-30",
+      "report_type": "interim",
+      "currency": "CNY",
+      "scope": "consolidated",
+      "canonical": {
+        "revenue": {
+          "value": 510000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 510000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2026-06-30 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "reported_operating_profit": {
+          "value": 102000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 102000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2026-06-30 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        },
+        "cash": {
+          "value": 100000000,
+          "unit": "currency",
+          "currency": "CNY",
+          "raw_value": 100000.0,
+          "raw_unit": "CNY thousands",
+          "source": {
+            "report": "Synthetic 2026-06-30 text",
+            "page": 1,
+            "origin": "synthetic"
+          }
+        }
+      },
+      "statements": {
+        "balance": [],
+        "income": [],
+        "cashflow": []
+      },
+      "report_facts": []
+    }
+  ],
+  "reports": [
+    {
+      "period_end": "2024-12-31",
+      "report_type": "annual",
+      "currency": "CNY",
+      "text_path": "materials/synthetic-2024.txt",
+      "source": "synthetic teaching only"
+    },
+    {
+      "period_end": "2025-12-31",
+      "report_type": "annual",
+      "currency": "CNY",
+      "text_path": "materials/synthetic-2025.txt",
+      "source": "synthetic teaching only"
+    },
+    {
+      "period_end": "2026-06-30",
+      "report_type": "interim",
+      "currency": "CNY",
+      "text_path": "materials/synthetic-2026H1.txt",
+      "source": "synthetic teaching only"
+    }
+  ],
+  "warnings": [
+    "Synthetic teaching only; short text is not a real full report."
+  ]
+}

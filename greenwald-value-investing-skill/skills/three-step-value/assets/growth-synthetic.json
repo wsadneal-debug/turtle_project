@@ -1,0 +1,95 @@
+{
+  "method": "growth",
+  "basis_mode": "reuse_epv",
+  "simulation": true,
+  "currency": "CNY",
+  "summary": "合成CNY三步接线示例，复用同包EPV；仅计算衰减前条件回报，未证实真实企业优势。",
+  "franchise": {
+    "status": "conditional",
+    "reason": "教学假设的局部优势，并未研究真实企业"
+  },
+  "distribution": {
+    "mode": "ratio",
+    "value": 0.6,
+    "reason": "合成可持续分配率，非公司事实"
+  },
+  "organic": {
+    "revenue_growth": 0.03,
+    "earnings_growth": 0.03,
+    "investment": {
+      "mode": "direct",
+      "value": 5000000,
+      "reason": "合成年度增量投入，维护已在EPV扣除"
+    },
+    "reason": "合成受保护市场假设"
+  },
+  "active": {
+    "mode": "direct",
+    "factor": 1.6,
+    "reason": "合成积极投资价值/投入假设，非默认因子"
+  },
+  "decay": {
+    "mode": "qualitative",
+    "reason": "合成例没有真实优势寿命数据，条件回报为衰减前；风险可能改变结论，未证明补偿充分"
+  },
+  "price": {
+    "mode": "market_cap",
+    "value": 1500000000,
+    "currency": "CNY",
+    "date": "2026-10-17",
+    "sources": [
+      "合成教学报价假设"
+    ]
+  },
+  "policy": {},
+  "price_grid": [
+    {
+      "name": "低价合成对照",
+      "mode": "market_cap",
+      "value": 1200000000,
+      "currency": "CNY",
+      "sources": [
+        "合成教学假设"
+      ]
+    },
+    {
+      "name": "高价合成对照",
+      "mode": "market_cap",
+      "value": 1800000000,
+      "currency": "CNY",
+      "sources": [
+        "合成教学假设"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "积极因子保值",
+      "reason": "合成资金配置对照",
+      "active": {
+        "mode": "direct",
+        "factor": 1
+      }
+    },
+    {
+      "name": "量化衰减假设",
+      "reason": "仅演示年度扣减，不是公司衰减事实或统一门槛",
+      "decay": {
+        "mode": "deduct",
+        "rate": 0.02,
+        "residual_fraction": 0.3
+      }
+    }
+  ],
+  "sources": [
+    "本包合成EPV与教学参数，不是任何企业当前数据"
+  ],
+  "assumptions": [
+    "全部为合成，CNY基本单位；冻结EPV E=1.4亿，B=-1.5亿，WACC10%。",
+    "半衰期数字可选，基准定性分析不产生已量化净回报。"
+  ],
+  "growth_route": {
+    "action": "evaluate",
+    "reason": "仅复现教学假设，不验证真实公司壁垒"
+  }
+}

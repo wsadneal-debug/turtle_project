@@ -1,0 +1,117 @@
+{
+  "method": "epv",
+  "simulation": true,
+  "currency": "CNY",
+  "valuation_date": "2026-06-30",
+  "scope": "parent_common",
+  "shares": 100000000,
+  "premise": "Purely synthetic business at normal current scale without growth; not a listed-company valuation.",
+  "summary": "Synthetic check: EBIT CNY200m, D&A addback CNY30m, maintenance CNY40m, tax CNY50m, distributable operating earnings CNY140m.",
+  "earnings": {
+    "revenue": 1000000000,
+    "margin": 0.2,
+    "ebit_adjustments": [],
+    "da_addback": 30000000,
+    "working_capital_addition": 0,
+    "lease": {
+      "mode": "none"
+    },
+    "reason": "Teaching assumptions only; the margin includes normal expenses."
+  },
+  "maintenance": {
+    "mode": "components",
+    "reason": "Replacement from new functional cost, not current remaining net value.",
+    "items": [
+      {
+        "id": "plant_renewal",
+        "name": "Synthetic annual equipment replacement",
+        "gross_cost": 400000000,
+        "residual": 0,
+        "life_years": 10,
+        "reason": "Teaching assumption",
+        "sources": [
+          "Synthetic input in this file"
+        ]
+      }
+    ]
+  },
+  "tax": {
+    "mode": "rate",
+    "rate": 0.25,
+    "adjustments": [],
+    "reason": "Teaching tax rate without financing shields"
+  },
+  "capital_cost": {
+    "mode": "direct",
+    "currency": "CNY",
+    "wacc": 0.1,
+    "as_of": "2026-06-30",
+    "reason": "Purely synthetic 10%, not current market capital cost",
+    "sources": [
+      "Teaching assumption"
+    ]
+  },
+  "equity_adjustments": [
+    {
+      "id": "cash",
+      "name": "Excess cash",
+      "kind": "excess_cash",
+      "value": 100000000,
+      "reason": "Not valued in core earnings"
+    },
+    {
+      "id": "debt",
+      "name": "Actual financing debt",
+      "kind": "financing_debt",
+      "value": 200000000,
+      "reason": "Deduct actual principal in full"
+    },
+    {
+      "id": "nci",
+      "name": "Outside shareholders earnings value",
+      "kind": "nci",
+      "value": 50000000,
+      "reason": "Synthetic earnings interest; does not reuse asset-method NCI"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Joint maintenance and recurring tax-difference scenario",
+      "reason": "Scenario assumes maintenance increases CNY10m and normal tax falls CNY2.5m; it does not make all capex immediately tax deductible.",
+      "maintenance": {
+        "mode": "direct",
+        "value": 50000000
+      },
+      "tax": {
+        "adjustments": [
+          {
+            "id": "renewal_tax",
+            "value": -2500000,
+            "reason": "Synthetic recurring tax difference"
+          }
+        ]
+      }
+    },
+    {
+      "name": "All share awards vest",
+      "shares": 110000000,
+      "reason": "Resources fixed; share count changes only"
+    }
+  ],
+  "sensitivity": {
+    "margins": [
+      0.18,
+      0.2,
+      0.22
+    ],
+    "waccs": [
+      0.08,
+      0.1,
+      0.12
+    ]
+  },
+  "assumptions": [
+    "All inputs are synthetic; ranges are not confidence intervals."
+  ],
+  "distribution": "Estimated distribution capacity is not dividends already received."
+}

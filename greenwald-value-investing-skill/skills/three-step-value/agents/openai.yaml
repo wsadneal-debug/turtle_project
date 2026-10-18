@@ -1,0 +1,6 @@
+interface:
+  display_name: "三步价值研究"
+  short_description: "从可用数据与官方财报开始，独立估算资产、EPV与给定价格的成长回报"
+  default_prompt: "使用 $three-step-value 研究我指定的企业，先检查可用数据工具与本地资料，再完成需要的估值模块并实际运行Python计算。"
+policy:
+  allow_implicit_invocation: true

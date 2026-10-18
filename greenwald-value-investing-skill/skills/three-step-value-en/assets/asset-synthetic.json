@@ -1,0 +1,124 @@
+{
+  "method": "asset",
+  "simulation": true,
+  "currency": "CNY",
+  "valuation_date": "2026-06-30",
+  "financial_position_date": "2026-06-30",
+  "shares": 100000000,
+  "premise": "Going concern; all inputs are synthetic teaching assumptions representing no actual company.",
+  "summary": "Synthetic assets CNY2.3bn less obligations/external claims CNY600m give parent-common CNY1.7bn, CNY17/share.",
+  "items": [
+    {
+      "id": "cash",
+      "name": "Cash",
+      "kind": "asset",
+      "operating": false,
+      "book_value": 100000000,
+      "value": 100000000,
+      "basis": "book",
+      "reason": "Unmodified synthetic fact amount",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "working_assets",
+      "name": "Normal current operating resources",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 500000000,
+      "value": 500000000,
+      "basis": "book",
+      "reason": "Synthetic book amount adopted as value",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "facilities",
+      "name": "Facility economic net reproduction value",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 900000000,
+      "value": 1200000000,
+      "basis": "estimate",
+      "reason": "Synthetic: new cost CNY1.5bn at 80% remaining service capacity gives CNY1.2bn",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "organization",
+      "name": "Effective team and systems",
+      "kind": "asset",
+      "operating": true,
+      "book_value": 0,
+      "value": 300000000,
+      "basis": "estimate",
+      "reason": "Synthetic combined rough estimate, without double counting facilities or book goodwill",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "investment",
+      "name": "Nonoperating investment interest",
+      "kind": "asset",
+      "operating": false,
+      "book_value": 200000000,
+      "value": 200000000,
+      "basis": "book",
+      "reason": "Synthetic equity holding; no duplicate look-through asset value",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "liabilities",
+      "name": "All economic obligations",
+      "kind": "liability",
+      "operating": false,
+      "book_value": 500000000,
+      "value": 500000000,
+      "basis": "book",
+      "reason": "Synthetic total obligations; do not add components again",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    },
+    {
+      "id": "nci",
+      "name": "Outside common equity",
+      "kind": "nci",
+      "operating": false,
+      "book_value": 100000000,
+      "value": 100000000,
+      "basis": "book",
+      "reason": "Synthetic net reproduction interest on matching scope",
+      "sources": [
+        "Synthetic teaching input in this file"
+      ],
+      "include": true
+    }
+  ],
+  "assumptions": [
+    "All amounts are synthetic, not financial disclosures or actual quotes."
+  ],
+  "scenarios": [
+    {
+      "name": "Lower remaining facility service capacity",
+      "reason": "Synthetic facility net value decreases by CNY200m, all else fixed",
+      "item_values": {
+        "facilities": 1000000000
+      }
+    }
+  ],
+  "scope": "parent_common",
+  "lease_basis": "none"
+}
