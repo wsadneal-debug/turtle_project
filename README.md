@@ -1,168 +1,58 @@
 # 格林沃尔特-价值投资 Skill
 
-面向少量 A 股、港股非金融企业的中英文 AI 研究技能，分别研究资产再生产价值、正常盈利能力价值（EPV）与给定价格下的成长回报；三个结果独立，不相加。提供完整技能目录、安装说明和离线合成示例，源码已公开，许可证尚未选定。
+面向少量 A 股、港股非金融企业的中英文 AI 研究技能。以资产再生产价值、正常盈利能力价值（EPV）和给定价格下的成长回报，分别回答“复制现有经营资源要花多少”“当前正常经营能支持多少价值”“这个买价下的成长回报是否有合理依据”。
 
-[中文说明与安装](greenwald-value-investing-skill/README.zh-CN.md) · [English guide](greenwald-value-investing-skill/README.md)
+- **资产再生产价值**：估计当前取得现有同等经营能力的经济成本，加上非经营资源、扣除义务及其他权益，得到归母普通股价值。
+- **EPV**：在不依赖增长的当前规模上，估计正常可分配盈利，明确维护投入、税、资本成本及归母股权调整。
+- **成长回报**：先判断持续竞争优势及其保护范围，适用时再估计给定买价下的分配、有机增长与剩余资金投资回报，并考虑经济衰减；可以判断跳过或暂缓，不强求每家企业计算成长回报。
 
----
+## 源码、说明与下载
 
-# Turtle Project - 龟龟项目
+- [完整技能源码目录](greenwald-value-investing-skill/)
+- [中文说明与完整使用方法](greenwald-value-investing-skill/README.zh-CN.md)
+- [English guide](greenwald-value-investing-skill/README.md)
+- [中文技能源码](greenwald-value-investing-skill/skills/three-step-value/)
+- [English skill source](greenwald-value-investing-skill/skills/three-step-value-en/)
+- [网站下载页：中文及英文 ZIP](https://turtle-web-cke.pages.dev/download/)
 
-🐢 **智能投资决策系统**
+在本分支选择 **Code → Download ZIP**，解压后可取得完整源码。安装时选一个完整语言技能目录；不能只复制 `SKILL.md`，也不要把整个仓库作为一个 skill 安装。
 
----
+## 安装与环境
 
-## 📁 项目结构
-
-```
-turtle_project/
-├── prompts/                 # 【最高优先级】项目提示词配置
-│   ├── README.md            # 提示词使用说明
-│   ├── ARCHITECTURE_PROMPT.md
-│   ├── A_STOCK_DATA_PROMPT.md
-│   ├── B_COMPUTE_PROMPT.md
-│   ├── B_SCORING_PROMPT.md
-│   ├── C_DAILY_SCAN_PROMPT.md
-│   ├── D_SCAN_PUBLISH_PROMPT.md
-│   ├── E_DAILY_PIPELINE_PROMPT.md
-│   ├── F_BACKTEST_PROMPT.md
-│   └── G_SIMULATED_PORTFOLIO_PROMPT.md
-│
-├── hk-risk-news/            # 港股风险新闻监控系统
-│   ├── core/                # 核心代码
-│   ├── scripts/             # 辅助脚本
-│   ├── docs/                # 项目文档
-│   ├── legacy/              # 历史代码
-│   └── README.md            # 子系统说明
-│
-├── data/                    # 数据目录
-├── logs/                    # 日志目录
-└── output/                  # 输出目录
-```
-
----
-
-## 🔮 Prompts - 项目提示词配置
-
-**优先级：最高** ⭐⭐⭐⭐⭐
-
-`prompts/` 目录包含整个项目的核心提示词配置，指导 AI 助手如何理解和执行项目任务。
-
-### 提示词列表
-
-| 文件 | 用途 |
-|------|------|
-| `README.md` | 提示词文档说明 |
-| `ARCHITECTURE_PROMPT.md` | 项目架构提示词 |
-| `A_STOCK_DATA_PROMPT.md` | A 股数据提示词 |
-| `B_COMPUTE_PROMPT.md` | 计算提示词 |
-| `B_SCORING_PROMPT.md` | 评分提示词 |
-| `C_DAILY_SCAN_PROMPT.md` | 每日扫描提示词 |
-| `D_SCAN_PUBLISH_PROMPT.md` | 扫描发布提示词 |
-| `E_DAILY_PIPELINE_PROMPT.md` | 每日流水线提示词 |
-| `F_BACKTEST_PROMPT.md` | 回测提示词 |
-| `G_SIMULATED_PORTFOLIO_PROMPT.md` | 模拟组合提示词 |
-
-### 使用说明
-
-1. **AI 助手启动时首先读取** `prompts/README.md`
-2. 根据任务类型加载对应的提示词文件
-3. 遵循提示词中的指导和规范执行任务
-
----
-
-## 📰 子系统
-
-### 1. 港股风险新闻监控系统 (hk-risk-news/)
-
-🔴 **自动监控 A/H 股市场风险新闻，智能识别风险股票**
-
-**功能**:
-- 20 个风险关键词搜索
-- 多搜索源支持（东方财富网、第一财经）
-- A+H 股市场覆盖（7876 条股票别名）
-- 智能股票映射
-- 自动去重入库
-- 定时自动执行（每天 18:00）
-
-**文档**: [hk-risk-news/README.md](hk-risk-news/README.md)
-
----
-
-## 🚀 快速开始
-
-### 1. 克隆仓库
+需要支持本地技能指引、文件读写和 Python 执行的 AI 助手，以及 **Python 3.10+**。以下从下载并解压后的仓库根目录执行，以常见 Codex 技能目录为例：
 
 ```bash
-git clone git@github.com-myrepo:wsadneal-debug/turtle_project.git
-cd turtle_project
+cd greenwald-value-investing-skill
+mkdir -p ~/.codex/skills
+cp -R skills/three-step-value ~/.codex/skills/
 ```
 
-### 2. 阅读提示词文档
+英文版将最后一行改为：
 
 ```bash
-cat prompts/README.md
+cp -R skills/three-step-value-en ~/.codex/skills/
 ```
 
-### 3. 进入子系统
+使用尚不存在的安装目标，不合并覆盖旧版；其他宿主使用其支持的技能目录。两版名称不同，可以同时安装。若从网站取得单语言 ZIP，解压后的完整目录可直接放入技能目录。
 
-```bash
-# 港股风险新闻监控系统
-cd hk-risk-news
-cat README.md
-```
+宿主 AI 负责发现可用 MCP/金融数据/报告工具、阅读报告、提出假设、综合和复核；随包 Python 只用标准库执行确定性计算并生成技术底稿，无需 pip 安装、特定私人数据库、模型 CLI 或计算器指定的 API 凭据。宿主工具与账号自身的条件另计。可从官方公开报告、用户上传文件开始，也可只读使用用户明确提供的数据库或资料目录，不要求建立特定私库。辅助程序不会自动从 PDF 识别财务事实，也不会自行调用研究模型；没有脚本执行能力时，不能声称已完成程序验算。
 
----
+## 示例请求
 
-## 📋 目录说明
+> 使用 $three-step-value 研究我指定的企业。先发现可用数据和报告工具，并一次询问我是否有本地数据库或财报目录。准备最近两份完整年报及其后最新季报或中报，三个方法分别研究、计算和交付。
 
-| 目录 | 用途 | 权限 |
-|------|------|------|
-| `prompts/` | 项目提示词配置 | 🔒 只读，核心配置 |
-| `hk-risk-news/` | 港股风险新闻系统 | ✅ 可修改 |
-| `data/` | 数据文件 | 📝 运行时生成 |
-| `logs/` | 日志文件 | 📝 运行时生成 |
-| `output/` | 输出文件 | 📝 运行时生成 |
+> 使用 $three-step-value，只做 EPV，资料是这些年报和中报。区分披露事实、正常化估计与实际 Python 计算。
 
----
+> 复用这份明确选定的 EPV，在我给定的价格下研究成长回报。先判断持续竞争优势；半衰期数字可选，保留原 EPV。
 
-## 🔐 提示词优先级
+> Use $three-step-value-en to research my chosen business, run the required Python calculations, and explain the independent results in English.
 
-```
-最高优先级 → prompts/
-            ↓
-        指导整个项目
-            ↓
-    各子系统遵循提示词规范
-```
+中文和英文版的参数合同与算法相同。英文版已提供英文指引、界面说明、参考材料及合成教学示例，并要求宿主以英文交付；共用计算器的 `report.md`、警告、命令帮助/诊断及部分生成文字仍为中文，宿主依据保存的实际数值解释或翻译，不宣称计算器已全英文。
 
-**重要**: 
-- `prompts/` 目录下的文件是项目的核心配置
-- 所有 AI 助手必须首先读取并遵循这些提示词
-- 修改提示词需要谨慎，影响整个项目行为
+## 结果与边界
 
----
+三个方法的结果独立，不相加、不平均；不把市值减 EPV 当成成长价值，也不将成长回报换成第三个总价值。允许有依据的粗估、类比和自主假设，但须与披露事实分开；小项目缺口不自动阻断资产或 EPV 基准估值。
 
-## 📖 详细文档
+成长适用性与回报计算分别说明。衰减可以定性分析；未量化时，衰减前条件回报不能冒称已验证的净回报，净回报未知就保留未知。教学示例不是真实企业估值。研究完成、算术完成、方法适用与买入决定并不相同，资产价值与 EPV 也不是保证底价。
 
-- **项目提示词**: [prompts/README.md](prompts/README.md)
-- **港股风险新闻系统**: [hk-risk-news/README.md](hk-risk-news/README.md)
-- **部署指南**: [hk-risk-news/docs/DEPLOYMENT_CHECKLIST.md](hk-risk-news/docs/DEPLOYMENT_CHECKLIST.md)
-
----
-
-## 🤝 贡献指南
-
-1. **修改提示词**: 需谨慎，影响整个项目
-2. **添加子系统**: 在根目录创建新目录
-3. **遵循规范**: 遵循 `prompts/` 中的指导
-
----
-
-## 📄 许可证
-
-MIT License
-
----
-
-*最后更新：2026-04-15*
+源码已经公开，**开源许可证尚未选定**；公开可见不等于已授予 MIT 或其他未指定的开源许可。
