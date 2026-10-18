@@ -9,7 +9,7 @@ Challenge optimism and unsupported caution: did cumulative data hide a quarter, 
 Recalculate necessary formulas/substitutions, shared capacity/tax, negative years, overlapping plans, current/full-term funding and intermediate dates. For prices verify actual calls, pagination, adjustments and unknown states. Report only performed actions; synthetic examples/static checks are not real model research or MCP validation. Add no mandatory model-field-completeness quality gate.
 
 ## Default delivery
-Open with one overall conclusion followed immediately by three separate judgments and their combination:
+Lead with the business base case: horizon, stable/improving/declining, subjective leaning toward decline, magnitude, causal explanation, dividend implications and one primary reversal condition. Then give the price-protection explanation, two separate headroom measures and the following independent judgments. Price eligibility must not overwrite the operating conclusion:
 - Business prerequisite: stable/not met/not established, with separate funding and delivery support for stable dividends.
 - Look-through return: adequate/inadequate/unknown; disclose spread-dependent interval results instead of selecting a favorable requirement.
 - Absolute valuation: clearly low/not clearly low/unknown or inapplicable, labeled standard, variant or downside upper bound.
@@ -18,4 +18,6 @@ Only established business/dividend prerequisites and both price conditions form 
 
 Then use the six dimensions for key judgments, evidence and confidence. Preserve five-year/latest-quarter comparisons, seasonality, material event revenue/group scaling and per-share cash consequences. Do not force counts or symmetry in opportunities/risks. Show major price intermediates, original/revised scenarios, branches and expiry; market context separately gives actual indicators or a skip reason. Include the strongest countercase, observable falsifiers and conclusion-changing gaps.
 
-State report period, research cutoff, price date, coverage, method 0.4.0 and actual review mode. Cite near claims, referencing private attachments by name/page without transmission. Provide verifiable reasons/formulas, not hidden deliberation; machine-readable output is optional without proprietary JSON. Corrections update conclusions and all dependent numbers. Requested files go to task output, preserving old versions, never the Skill installation.
+State report period, research cutoff, price date, coverage, research method 5.2.2, package 5.2.2 and actual review mode. Cite near claims, referencing private attachments by name/page without transmission. Provide verifiable reasons/formulas, not hidden deliberation; machine-readable output is optional without proprietary JSON. Corrections update conclusions and all dependent numbers. Requested files go to task output, preserving old versions, never the Skill installation.
+
+State extra due-diligence status: not enabled / enabled but incomplete / completed within the actual scope. Ordinary self-check is not the extra ten-direction review; sequential single-model work is not independent multi-model verification. Declining the add-on does not reduce base-analysis completion, and silence is not consent.

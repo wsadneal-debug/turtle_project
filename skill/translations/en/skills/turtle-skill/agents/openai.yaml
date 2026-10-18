@@ -1,4 +1,4 @@
 interface:
-  display_name: "turtle skill"
-  short_description: "Business and dividends first, then return and valuation"
-  default_prompt: "Use $turtle-skill to examine five-year/latest-quarter trends, event revenue projections and group scaling, verify per-share cash and sustainable dividends, then assess both price conditions."
+  display_name: "Turtle Research V5.2.2"
+  short_description: "Business base case, dual price tests and opt-in due diligence"
+  default_prompt: "Use $turtle-skill for V5.2.2 company research, report the operating base case and both price conditions, and ask whether I want extra due diligence."

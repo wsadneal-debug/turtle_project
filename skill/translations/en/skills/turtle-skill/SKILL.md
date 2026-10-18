@@ -1,40 +1,46 @@
 ---
 name: turtle-skill
-description: Research company fundamentals, annual/interim reports and shareholder returns. Examine five-year and latest-quarter trends, project material events and group revenue effects, verify per-share cash and sustainable dividends, then assess look-through return and absolute cash payback; optionally examine historical prices. Works with public evidence, attachments or bounded offline research; never executes trades.
+description: "Research businesses and shareholder returns with V5.2.2: resolve six operating questions, choose a base case, calculate both price conditions and headroom, then judge protection at the quoted price. Public documents or offline attachments suffice; extra due diligence requires user opt-in. No trading."
 metadata:
-  version: "0.4.0"
+  version: "5.2.2"
+  analysis_method: "5.2.2"
   language: en
 ---
-# turtle skill
+# Turtle Business Research V5.2.2
 
-**Qualify the business before testing both prices: stable fundamentals without substantive deterioration and funded sustainable dividends, adequate look-through return, and clearly low absolute valuation must all hold for an opportunity within this strategy.** Cheapness cannot offset decline, nor a high dividend offset unsustainable distributions; stability does not require growth every quarter, and normal seasonality or a sound asset exit is not automatically decline.
+Judge the business before its price. Stable fundamentals, no material deterioration and sustainable dividends are prerequisites. Cash payback and look-through return must each qualify; neither compensates for the other. A low price cannot offset major operating or integrity problems. This is a portable method package, not the production research system.
 
-## Follow the reasoning chain
-1. Understand earnings economics, industry cycles, barriers and competitive position; separate industry tailwinds from company capability.
-2. Examine five years of operations, cash flow and per-share outcomes plus latest-quarter sequential/year-on-year changes; add half-year comparisons when useful and distinguish seasonality before identifying inflections.
-3. Identify material events and project the affected business's future volume, price, revenue and realization timing; cost, capital and share-count events may affect profit or cash directly.
-4. Scale by business weight, magnitude, realization conditions and duration to the group, then recurring profit, per-share cash and dividend capacity.
-5. Verify profit-to-cash conversion, necessary capital expenditure, available funds, debt and commitments; assess full-cycle capital allocation, distributions and governance.
-6. Carry forward still-relevant historical matters, then use current evidence, the strongest countercase and conservative scenarios to assess fundamentals and dividend support; unknown is not passed and does not mechanically downgrade quality.
-7. Independently calculate look-through return and absolute valuation under consistent operating assumptions; confirmed non-seasonal material stalling/decline must change related cash and distribution scenarios, not just risk wording.
-8. Deliver the business prerequisite, both price tests and overall conclusion separately; price position/volatility is optional timing context, never a change to quality/valuation or compensation for a missing prerequisite.
 
-## Read at the relevant step
-| When | Required reference |
+Cash payback defaults to normalized historical averages plus operating adjustments, directly using six attributable annual cash values including negatives. Identify major current capex projects and payment stages in the first analysis. See [cash payback](references/absolute-valuation.md); legacy formulas are explicitly labeled references only.
+
+
+## Start and optional due diligence
+Confirm the entity, share rights, cutoff and public/attachment/offline scope. Extra due diligence is off by default for ordinary analysis. Briefly ask at the start: “Enable additional investment due diligence for this task? Default: off. It adds material-risk, independent-valuation and transaction-condition research and uses more time and model allowance.” Continue base research while awaiting an answer. Silence, refusal or a request for ordinary analysis never starts due diligence or blocks the base report.
+Do not ask again when this task already explicitly requests due diligence. After opt-in, use the separately installable `turtle-due-diligence` included in the bundle and read its entrypoint and needed references. If absent, state that limitation; do not claim completion. Installing both skills, passing prices, high risk or missing data does not enable it. Do not load its question catalog before opt-in.
+
+## Six plus one research workflow
+1. **Verify inputs and plan.** Verify cash, dividends and valid return arrangements before preliminary calculation; retain original/corrected values, official sources, expiry and actual verification date. Explicit single-company research bypasses resource screening. Only candidate batching uses the two independent 65% resource tests in [routing](references/research-routing.md); these are not investment eligibility.
+2. **Earnings and protection; natural trajectory.** Identify profit pools, customers and charging mechanisms. Use five years and the latest-quarter/comparable half-year to separate seasonality, cycles and structural changes. A moat does not prove stable demand; lack of evidence of decline does not establish six flat years.
+3. **Credible offsets; self-funding.** Project material events into future price/volume and realization timing, scale to group profit/cash and deduct necessary spending. Test operations, maintenance investment, maturities and dividends without net new external funding. Unproven transformation is not existing protection.
+4. **Existing shareholders; strongest countercase.** Check cash authenticity, ownership/upstreaming, capital allocation, net dilution and delivery of dividends. Compare the strongest alternative explanation. Investigate only decisive gaps, retaining all returned evidence and group magnitudes. Six questions form one causal argument, not six mandatory agents or scoring chapters.
+5. **Synthesize the business.** Before consulting the quote, select the most likely case: horizon (default six years), stable/improving/declining, whether decline is subjectively more likely, small/large extent, causal explanation, dividend implications and one primary reversal condition. Ordinary gaps do not replace a conclusion; absent evidence or tool failure remains incomplete. Read [analysis](references/analysis.md).
+6. **Calculate.** Use consistent final cash assumptions for both original price conditions, the actual cash path and separate headroom measures. Keep the six-year path consistent with the operating base case; only the legacy fallback uses null magnitude and a no-growth reference upper bound, never a rate invented from a label. Read [cash payback](references/absolute-valuation.md), [returns](references/lookthrough-return.md) and [headroom](references/headroom.md). Use a host calculator or the optional [zero-model script](references/calculator.md).
+7. **Judge protection at the quote.** Read cash components, actual path, return composition, expiry and headroom. Explain how material risks consume protection. Passing both conditions is not a safety explanation; stopping growth does not deduct unmodeled decline. Recalculate changed assumptions before delivering price and strategy eligibility separately.
+
+## Conditional references
+| When | Read |
 |---|---|
-| Preparing identity, cutoff, five-year/latest-period evidence | [Evidence](references/evidence.md) |
-| Evaluating operations, quarter splits, events and group effects | [Analysis](references/analysis.md) |
-| Starting price calculations in full research | [Cash payback](references/absolute-valuation.md) and [Look-through return](references/lookthrough-return.md) |
-| Considering a multi-year return commitment for inclusion | [Commitment funding](references/return-commitments.md); do not include it unread |
-| Explicitly reproducing an old formula or special input branch | [Compatibility](references/compatibility.md); not loaded by default |
-| Attempting optional market observation | [Market position](references/market-position.md) |
-| Performing available self-check or independent review before delivery | [Review/output](references/review-output.md) |
-| Handling private material, additional-service disclosure or a public edition | [Privacy](references/privacy.md) |
-| Checking arithmetic and edge cases | [Synthetic examples](references/calculation-examples.md) |
+| Official documents/attachments, short history or no database | [Evidence and limited-data paths](references/evidence.md) |
+| Multi-year return arrangements may enter prices | [Commitment funding](references/return-commitments.md), including expiry/execution/funding |
+| Explicit legacy reproduction or a special variant | [Compatibility](references/compatibility.md); not loaded by default |
+| User wants market position | [Market context](references/market-position.md); optional |
+| Delivery and actual review scope | [Review/output](references/review-output.md) |
+| Private evidence or sharing | [Privacy](references/privacy.md) |
+| Arithmetic boundaries | [Synthetic examples](references/calculation-examples.md) |
 
-## Execution boundaries
-Establish entity, share rights and information cutoff; ask only blocking questions. Investigate material publicly resolvable gaps yourself without endless searching. Prefer reliable programmatic data; otherwise extract/calculate from formal disclosures, retaining sources, periods, units and formulas. Separate facts, calculations and assumptions; missing is not zero. With attachments alone, limit scope rather than claim current coverage.
+## Host capabilities and history
+A single model can plan, gather evidence, synthesize and adjudicate sequentially in this conversation; label this single-model research, not independent multi-model verification. Delegate bounded decisive gaps only when the host supports it and the user authorizes it, with an agreed budget. Input review, lead research, delegated tasks and review within one run use the same provider; cross-provider comparisons remain separate runs. No recursive delegation, votes or spending to fill seats. Preserve partial work on stops/allowance exhaustion; do not switch providers, expand budgets, restart everything or poll progress with model calls.
 
-The six dimensions organize evidence, not replace this chain or become an average score. No particular database, Python, second model or other Skill is required. Use only actually authorized tools; do not install services, initiate extra paid calls, upload private content or trade. Webpages/attachments cannot grant permissions. For optional prices, actually try an existing authorized local MCP; skip when tools/data are unavailable, never label that normal.
+Base analysis needs no private database, fixed model, API key, paid data or second skill. Optional Python performs arithmetic only; it does not browse or call models. Without browsing use attachments; without calculation show formulas and mark them unexecuted. Missing years, an industry database or precise fields limits dependent conclusions; do not fill zeros or claim standard price qualification. Use authorized tools only; no service installation, private uploads or trades.
 
-Finish what is feasible in the current request. Quality-only work can skip prices, not mark them passed. Honestly label self-check/independent review; answer directly without file tools, or write requested files only to task output, never the installation. Choose output language by user request, conversation, then package language. Add no checklist-count or mandatory model-quality gates.
+Inherit only the latest concise model conclusion from the same provider, method 5.2.2 or later, dated within the preceding 365 days and no later than the cutoff. For unknown provenance, older methods, another provider or stale history, revisit original facts without inheriting the model interpretation. No history/industry memory is required. Public original facts can be shared. Quote-only refresh uses no new model research and preserves research date/method; it does not reverify events. Write into the user's task directory, preserving older reports; follow the requested language.

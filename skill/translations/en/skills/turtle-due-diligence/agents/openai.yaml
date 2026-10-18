@@ -1,0 +1,6 @@
+interface:
+  display_name: "Turtle Optional Due Diligence"
+  short_description: "Opt-in investment review using public documents or attachments"
+  default_prompt: "Use $turtle-due-diligence for an investment review of the selected company, separating business judgments, independent value and transaction conditions."
+policy:
+  allow_implicit_invocation: false

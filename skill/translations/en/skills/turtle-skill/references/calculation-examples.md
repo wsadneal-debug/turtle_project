@@ -1,4 +1,7 @@
 # Synthetic cases: arithmetic and reasoning boundaries
+
+The current default uses six normalized parent-attributed cash estimates; see [cash payback](absolute-valuation.md). Old F0/slope/floor examples below are explicit legacy reproductions, not the default forecast.
+
 All figures are fictional, in one currency's millions except P. No case prescribes a real company's conclusion; passing arithmetic does not establish actual model behavior.
 
 ## Baseline recovery and shared capacity

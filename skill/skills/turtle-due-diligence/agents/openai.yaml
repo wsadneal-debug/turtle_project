@@ -1,0 +1,6 @@
+interface:
+  display_name: "龟龟可选投资尽调"
+  short_description: "用户启用后执行十方向投资尽调，支持公开资料或附件独立研究"
+  default_prompt: "使用 $turtle-due-diligence 对指定企业进行投资尽调，基于公开资料或附件，区分经营判断、独立价值和交易条件。"
+policy:
+  allow_implicit_invocation: false

@@ -1,4 +1,4 @@
 interface:
-  display_name: "龟龟skill"
-  short_description: "先判断基本面与分红，再检验回报和估值"
-  default_prompt: "使用 $turtle-skill，按五年与最新单季、事件营收推演和集团缩放研究企业，核实每股现金与稳定分红，再评估两项价格条件。"
+  display_name: "龟龟研究 V5.2.2"
+  short_description: "先选经营基准，再算双价格与容错，额外尽调由用户选择启用"
+  default_prompt: "使用 $turtle-skill 按V5.2.2研究指定企业，交付经营基准和两项价格判断，并询问我是否启用额外投资尽调。"
